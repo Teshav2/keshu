@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+        }
+        #video-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+        video {
+            width: 150px;
+            height: auto;
+            display: none;
+        }
+        #buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        #yes {
+            background-color: green;
+            color: white;
+        }
+        #no {
+            background-color: red;
+            color: white;
+        }
+        #message {
+            font-size: 24px;
+            color: #ff3366;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my valentine every day? 🥺❤️</h1>
+    <div id="video-container">
+        <!-- Penguin Video -->
+        <video id="penguin-video" autoplay loop muted>
+            <source src="file:///C:/Users/HP/Downloads/New%20folder%20(5)/CUTE%20PENGUIN%20ANIMATION%20CARTOON%20LIKE.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Panda and Penguin Hug Video -->
+        <video id="panda-video" autoplay loop muted>
+            <source src="file:///C:/Users/HP/Downloads/New%20folder%20(5)/panda%20and%20penguin%20hugging%20cute%20animation%20cartoon%20like.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div id="buttons">
+        <button id="yes" onclick="showLove()">Yes</button>
+        <button id="no" onclick="shrinkNo()">No</button>
+    </div>
+    <p id="message"></p>
+    
+    <script>
+        let noSize = 20;
+        let yesSize = 20;
+        
+        function shrinkNo() {
+            noSize -= 2;
+            yesSize += 4;
+            document.getElementById('no').style.fontSize = noSize + 'px';
+            document.getElementById('yes').style.fontSize = yesSize + 'px';
+            
+            if (noSize <= 5) {
+                document.getElementById('no').style.display = 'none';
+            }
+            
+            document.getElementById('penguin-video').style.display = 'block';
+            document.getElementById('panda-video').style.display = 'none';
+        }
+
+        function showLove() {
+            document.getElementById('message').innerHTML = "I loveee youuu sooooooooo muuuuuuchhh keshuuuuuu 🥺❤️ you are the best girl in the whole world and you mean sooo much to me my baby ❤️❤️❤️ you're my valentine everyday 🥺❤️❤️";
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('penguin-video').style.display = 'none';
+            document.getElementById('panda-video').style.display = 'block';
+            document.getElementById('buttons').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
